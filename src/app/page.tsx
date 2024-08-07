@@ -36,10 +36,10 @@ export default function Home() {
   return (
     <main className="container">
       <div className="flex h-screen flex-col gap-7 py-16">
-        <div className="flex gap-4">
+        <form className="flex gap-4" onSubmit={(e) => e.preventDefault()}>
           <Input ref={inputRef} placeholder="Enter text" />
           <Button onClick={createQRCode}>Create QR Code</Button>
-        </div>
+        </form>
         <div className="grow place-self-center">
           <div className="flex flex-col place-items-center text-center">
             <canvas ref={canvasRef}></canvas>
